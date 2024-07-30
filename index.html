@@ -9,9 +9,11 @@
 <body>
     <div id="notification-container"></div>
     
-    <button onclick="showNotification('success', 'This is a success message!')">Show Success</button>
-    <button onclick="showNotification('error', 'This is an error message!')">Show Error</button>
-    <button onclick="showNotification('info', 'This is an info message!')">Show Info</button>
+    <div class="button-container">
+        <button class="btn success-btn" onclick="showNotification('success', 'This is a success message!')">Show Success</button>
+        <button class="btn error-btn" onclick="showNotification('error', 'This is an error message!')">Show Error</button>
+        <button class="btn info-btn" onclick="showNotification('info', 'This is an info message!')">Show Info</button>
+    </div>
     
     <script src="script.js"></script>
 </body>
