@@ -11,20 +11,27 @@ body {
 #notification-container {
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 300px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .notification {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
     color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    animation: slideIn 0.5s ease-out;
+    animation: slideIn 0.5s ease-out, slideOut 0.5s ease-in 2.5s forwards;
+    width: 100%;
+    text-align: center;
 }
 
 .notification.success {
@@ -42,10 +49,21 @@ body {
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateY(-100%);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
     }
 }
