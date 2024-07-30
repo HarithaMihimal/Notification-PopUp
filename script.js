@@ -8,7 +8,7 @@ function showNotification(type, message) {
     notificationContainer.appendChild(notification);
 
     setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.addEventListener('transitionend', () => notification.remove());
+        notification.style.animation = 'slideOut 0.5s ease-in forwards';
+        notification.addEventListener('animationend', () => notification.remove());
     }, 3000);
 }
